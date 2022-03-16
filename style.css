@@ -12,30 +12,6 @@ input {
     width: 400px;
 }
 
-p {
-    font-size: 20px;
-}
-
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.left {
-    left: 0;
-    background-color: #111;
-}
-
-.right {
-    right: 0;
-    background-color: red;
-}
-
 .centered {
     position: absolute;
     top: 90%;
@@ -62,6 +38,9 @@ p {
         height: 500px;
         background-color: rgba(255, 255, 255, 0.5);
     }
+    .slider {
+        margin-bottom: 5%;
+    }
 }
 
   
@@ -75,6 +54,9 @@ p {
         width: 300px;
         height: 300px;
         background-color: rgba(255, 255, 255, 0.5);
+    }
+    .slider {
+        margin-bottom: 15%;
     }
 }
 
@@ -118,18 +100,6 @@ p {
 }
 
 #blueRange1::-webkit-slider-thumb {
-    background: blue;
-}
-
-#redRange2::-webkit-slider-thumb {
-    background: red;
-}
-
-#greenRange2::-webkit-slider-thumb {
-    background: green;
-}
-
-#blueRange2::-webkit-slider-thumb {
     background: blue;
 }
 
