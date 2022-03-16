@@ -51,16 +51,33 @@ p {
     margin: 0;
 }
 
-.box {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
-    background-color: rgba(255, 255, 255, 0.5);
+@media all and (min-width: 768px) and (max-width: 5000px) {
+    .box {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
+
+  
+@media all and (min-width: 0px) and (max-width: 768px) {
+    .box {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
 
 .slidecontainer {
     width: 100%;
