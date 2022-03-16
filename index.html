@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<title>Sebastian's Color Picker</title>
+</head>
+<body>
+    <div class="box">
+        <!-- melodic blue -->
+        <div class="section" id="1" style="background-color: rgb(200, 230, 240);"></div>
+        <div class="section" id="2" style="background-color: rgb(195, 210, 240);"></div>
+        <div class="section" id="3" style="background-color: rgb(165, 190, 240);"></div>
+        <div class="section" id="4" style="background-color: rgb(130, 170, 240);"></div>
+        <div class="section" id="5" style="background-color: rgb(110, 150, 240);"></div>
+        <div class="section" id="6" style="background-color: rgb(100, 130, 240);"></div>
+
+        <!-- durag activity -->
+        <!-- <div class="section" id="1" style="background-color: rgb(100, 80, 60);">1</div>
+        <div class="section" id="2" style="background-color: rgb(100, 75, 60);">2</div>
+        <div class="section" id="3" style="background-color: rgb(90, 70, 55);">3</div>
+        <div class="section" id="4" style="background-color: rgb(80, 65, 50);">4</div>
+        <div class="section" id="5" style="background-color: rgb(75, 60, 45);">5</div>
+        <div class="section" id="6" style="background-color: rgb(70, 55, 40);">6</div>  -->
+
+        <!-- hooligan -->
+        <!-- <div class="section" id="1" style="background-color: rgb(190, 200, 195);">1</div>
+        <div class="section" id="2" style="background-color: rgb(150, 160, 150);">2</div>
+        <div class="section" id="3" style="background-color: rgb(115, 125, 120);">3</div>
+        <div class="section" id="4" style="background-color: rgb(90, 95, 90);">4</div>
+        <div class="section" id="5" style="background-color: rgb(65, 75, 70);">5</div>
+        <div class="section" id="6" style="background-color: rgb(45, 50, 50);">6</div>  -->
+
+    </div>
+    <div class="centered">
+        <div class="slidecontainer">
+            <input type="range" min="70" max="255" value="200" class="slider" id="redRange1">
+            <input type="range" min="70" max="255" value="230" class="slider" id="greenRange1">
+            <input type="range" min="70" max="255" value="240" class="slider" id="blueRange1">
+        </div>
+    </div>
+     
+<script>
+    var first = document.getElementById("1");
+    var second = document.getElementById("2");
+    var third = document.getElementById("3");
+    var fourth = document.getElementById("4");
+    var fifth = document.getElementById("5");
+    var sixth = document.getElementById("6");
+
+    var redSlider1 = document.getElementById("redRange1");
+    var greenSlider1 = document.getElementById("greenRange1");
+    var blueSlider1 = document.getElementById("blueRange1");
+
+    first.style.backgroundColor = "rgb(" + redSlider1.value + "," + greenSlider1.value + "," + blueSlider1.value + ")";
+
+    redSlider1.oninput = function() {
+        redSlider1.style.opacity = this.value / 255 + 0.1;
+        var green = greenSlider1.value;
+        var blue = blueSlider1.value;
+        first.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        green = greenSlider1.value - 20;
+        blue = blueSlider1.value - 20;
+        second.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        green = greenSlider1.value - 30;
+        blue = blueSlider1.value - 30;
+        third.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        green = greenSlider1.value - 40;
+        blue = blueSlider1.value - 40;
+        fourth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        green = greenSlider1.value - 50;
+        blue = blueSlider1.value - 50;
+        fifth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        green = greenSlider1.value - 60;
+        blue = blueSlider1.value - 60;
+        sixth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+    }
+
+    greenSlider1.oninput = function() {
+        redSlider1.style.opacity = this.value / 255 + 0.1;
+        var red = redSlider1.value;
+        var blue = blueSlider1.value;
+        first.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        red = redSlider1.value - 20;
+        blue = blueSlider1.value - 20;
+        second.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        red = redSlider1.value - 30;
+        blue = blueSlider1.value - 30;
+        third.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        red = redSlider1.value - 40;
+        blue = blueSlider1.value - 40;
+        fourth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        red = redSlider1.value - 50;
+        blue = blueSlider1.value - 50;
+        fifth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        red = redSlider1.value - 60;
+        blue = blueSlider1.value - 60;
+        sixth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+    }
+
+    blueSlider1.oninput = function() {
+        redSlider1.style.opacity = this.value / 255 + 0.1;
+        var red = redSlider1.value;
+        var green = greenSlider1.value;
+        first.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        red = redSlider1.value - 20;
+        green = greenSlider1.value - 20;
+        second.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        red = redSlider1.value - 30;
+        green = greenSlider1.value - 30;
+        third.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        red = redSlider1.value - 40;
+        green = greenSlider1.value - 40;
+        fourth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        red = redSlider1.value - 50;
+        green = greenSlider1.value - 50;
+        fifth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        red = redSlider1.value - 60;
+        green = greenSlider1.value - 60;
+        sixth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+    }
+</script>
+</body>
+</html> 
