@@ -31,7 +31,7 @@ input {
     .box {
         display: flex;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 500px;
@@ -48,7 +48,7 @@ input {
     .box {
         display: flex;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
@@ -92,15 +92,15 @@ input {
 }
 
 #redRange1::-webkit-slider-thumb {
-    background: red;
+    background: rgb(255, 50, 50);
 }
 
 #greenRange1::-webkit-slider-thumb {
-    background: green;
+    background: rgb(50, 255, 50);
 }
 
 #blueRange1::-webkit-slider-thumb {
-    background: blue;
+    background: rgb(50, 50, 255);
 }
 
 .slider::-moz-range-thumb {

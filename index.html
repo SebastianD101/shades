@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<link rel="icon" type="image/x-icon" href="logo.PNG">
 <title>shades</title>
 </head>
 <body>
@@ -35,9 +35,9 @@
     </div>
     <div class="centered">
         <div class="slidecontainer">
-            <input type="range" min="70" max="255" value="200" class="slider" id="redRange1">
-            <input type="range" min="70" max="255" value="230" class="slider" id="greenRange1">
-            <input type="range" min="70" max="255" value="240" class="slider" id="blueRange1">
+            <input type="range" min="80" max="255" value="200" class="slider" id="redRange1">
+            <input type="range" min="80" max="255" value="230" class="slider" id="greenRange1">
+            <input type="range" min="80" max="255" value="240" class="slider" id="blueRange1">
         </div>
     </div>
      
@@ -78,7 +78,7 @@
     }
 
     greenSlider1.oninput = function() {
-        redSlider1.style.opacity = this.value / 255 + 0.1;
+        greenSlider1.style.opacity = this.value / 255 + 0.1;
         var red = redSlider1.value;
         var blue = blueSlider1.value;
         first.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
@@ -100,7 +100,7 @@
     }
 
     blueSlider1.oninput = function() {
-        redSlider1.style.opacity = this.value / 255 + 0.1;
+        blueSlider1.style.opacity = this.value / 255 + 0.1;
         var red = redSlider1.value;
         var green = greenSlider1.value;
         first.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
