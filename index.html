@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="logo.PNG">
-<title>shades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.PNG">
+    <title>shades</title>
 </head>
+
 <body>
     <div class="box">
         <!-- melodic blue -->
@@ -40,86 +42,87 @@
             <input type="range" min="80" max="255" value="240" class="slider" id="blueRange1">
         </div>
     </div>
-     
-<script>
-    var first = document.getElementById("1");
-    var second = document.getElementById("2");
-    var third = document.getElementById("3");
-    var fourth = document.getElementById("4");
-    var fifth = document.getElementById("5");
-    var sixth = document.getElementById("6");
 
-    var redSlider1 = document.getElementById("redRange1");
-    var greenSlider1 = document.getElementById("greenRange1");
-    var blueSlider1 = document.getElementById("blueRange1");
+    <script>
+        var first = document.getElementById("1");
+        var second = document.getElementById("2");
+        var third = document.getElementById("3");
+        var fourth = document.getElementById("4");
+        var fifth = document.getElementById("5");
+        var sixth = document.getElementById("6");
 
-    first.style.backgroundColor = "rgb(" + redSlider1.value + "," + greenSlider1.value + "," + blueSlider1.value + ")";
+        var redSlider1 = document.getElementById("redRange1");
+        var greenSlider1 = document.getElementById("greenRange1");
+        var blueSlider1 = document.getElementById("blueRange1");
 
-    redSlider1.oninput = function() {
-        redSlider1.style.opacity = this.value / 255 + 0.1;
-        var green = greenSlider1.value;
-        var blue = blueSlider1.value;
-        first.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-        green = greenSlider1.value - 20;
-        blue = blueSlider1.value - 20;
-        second.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-        green = greenSlider1.value - 30;
-        blue = blueSlider1.value - 30;
-        third.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-        green = greenSlider1.value - 40;
-        blue = blueSlider1.value - 40;
-        fourth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-        green = greenSlider1.value - 50;
-        blue = blueSlider1.value - 50;
-        fifth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-        green = greenSlider1.value - 60;
-        blue = blueSlider1.value - 60;
-        sixth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
-    }
+        first.style.backgroundColor = "rgb(" + redSlider1.value + "," + greenSlider1.value + "," + blueSlider1.value + ")";
 
-    greenSlider1.oninput = function() {
-        greenSlider1.style.opacity = this.value / 255 + 0.1;
-        var red = redSlider1.value;
-        var blue = blueSlider1.value;
-        first.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-        red = redSlider1.value - 20;
-        blue = blueSlider1.value - 20;
-        second.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-        red = redSlider1.value - 30;
-        blue = blueSlider1.value - 30;
-        third.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-        red = redSlider1.value - 40;
-        blue = blueSlider1.value - 40;
-        fourth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-        red = redSlider1.value - 50;
-        blue = blueSlider1.value - 50;
-        fifth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-        red = redSlider1.value - 60;
-        blue = blueSlider1.value - 60;
-        sixth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
-    }
+        redSlider1.oninput = function () {
+            redSlider1.style.opacity = this.value / 255 + 0.1;
+            var green = greenSlider1.value;
+            var blue = blueSlider1.value;
+            first.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+            green = greenSlider1.value - 20;
+            blue = blueSlider1.value - 20;
+            second.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+            green = greenSlider1.value - 30;
+            blue = blueSlider1.value - 30;
+            third.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+            green = greenSlider1.value - 40;
+            blue = blueSlider1.value - 40;
+            fourth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+            green = greenSlider1.value - 50;
+            blue = blueSlider1.value - 50;
+            fifth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+            green = greenSlider1.value - 60;
+            blue = blueSlider1.value - 60;
+            sixth.style.backgroundColor = "rgb(" + redSlider1.value + "," + green + "," + blue + ")";
+        }
 
-    blueSlider1.oninput = function() {
-        blueSlider1.style.opacity = this.value / 255 + 0.1;
-        var red = redSlider1.value;
-        var green = greenSlider1.value;
-        first.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-        red = redSlider1.value - 20;
-        green = greenSlider1.value - 20;
-        second.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-        red = redSlider1.value - 30;
-        green = greenSlider1.value - 30;
-        third.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-        red = redSlider1.value - 40;
-        green = greenSlider1.value - 40;
-        fourth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-        red = redSlider1.value - 50;
-        green = greenSlider1.value - 50;
-        fifth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-        red = redSlider1.value - 60;
-        green = greenSlider1.value - 60;
-        sixth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
-    }
-</script>
+        greenSlider1.oninput = function () {
+            greenSlider1.style.opacity = this.value / 255 + 0.1;
+            var red = redSlider1.value;
+            var blue = blueSlider1.value;
+            first.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+            red = redSlider1.value - 20;
+            blue = blueSlider1.value - 20;
+            second.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+            red = redSlider1.value - 30;
+            blue = blueSlider1.value - 30;
+            third.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+            red = redSlider1.value - 40;
+            blue = blueSlider1.value - 40;
+            fourth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+            red = redSlider1.value - 50;
+            blue = blueSlider1.value - 50;
+            fifth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+            red = redSlider1.value - 60;
+            blue = blueSlider1.value - 60;
+            sixth.style.backgroundColor = "rgb(" + red + "," + greenSlider1.value + "," + blue + ")";
+        }
+
+        blueSlider1.oninput = function () {
+            blueSlider1.style.opacity = this.value / 255 + 0.1;
+            var red = redSlider1.value;
+            var green = greenSlider1.value;
+            first.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+            red = redSlider1.value - 20;
+            green = greenSlider1.value - 20;
+            second.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+            red = redSlider1.value - 30;
+            green = greenSlider1.value - 30;
+            third.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+            red = redSlider1.value - 40;
+            green = greenSlider1.value - 40;
+            fourth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+            red = redSlider1.value - 50;
+            green = greenSlider1.value - 50;
+            fifth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+            red = redSlider1.value - 60;
+            green = greenSlider1.value - 60;
+            sixth.style.backgroundColor = "rgb(" + red + "," + green + "," + blueSlider1.value + ")";
+        }
+    </script>
 </body>
-</html> 
+
+</html>
